@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Nearby Shops</title>
+    </head>
+    <body>
+        <h1 style="text-align: center;">Shops around you!</h1>
+        {% if shops %}
+        <ul style="justify-content: center; text-align:center;">
+            {% for shop in shops %}
+            <li style="text-align:center; list-style-type: none;">
+                {{ shop.name }}: {{shop.distance}}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </body>
+</html>
